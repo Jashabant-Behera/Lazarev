@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Effect</title>
+<style>
+  .parent {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  .child1, .child2, .grandchild {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    display: inline-block;
+    margin: 10px;
+    transition: width 0.3s ease; /* Add transition effect for smoother animation */
+  }
+
+  .grandchild:hover ~ .child2 {
+    width: 200px;
+  }
+</style>
+</head>
+<body>
+
+<div class="parent">
+  <div class="child1">
+    Child 1
+    <div class="grandchild">Grandchild</div>
+  </div>
+  <div class="child2">Child 2</div>
+</div>
+
+</body>
+</html>

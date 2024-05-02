@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Image Moving Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .moving-image {
+      animation: moveX 10s linear infinite;
+      max-width: 100%; /* Ensure the image doesn't exceed its container */
+    }
+
+    @keyframes moveX {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="your_image.jpg" class="moving-image">
+  </div>
+</body>
+</html>

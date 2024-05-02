@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+    color: white;
+    scrollbar-width: none;
+}
+html ,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+/* Nav Css */
+nav{
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: black;
+    z-index: 10;
+    top: 0;
+}
+.upper-nav{
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+}
+.lower-nav{
+    height: 0rem;
+    top: 100%;
+    width: 88%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    background-color:black;
+    border-bottom: 2px solid white;
+    transition: all ease 0.6s;
+    position: absolute;
+}
+nav:hover .lower-nav{
+    height: 13rem;
+}
+.btn{
+    width: 10rem;
+    background-color: #0BA34E;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    border-radius: 50px;
+    border: none;
+    position: relative;
+    overflow: hidden ;
+}
+.btn h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:1rem;
+    padding: 0.5rem;
+    position: relative;
+    z-index: 5;
+}
+.btn svg{
+    height: 3.5vw;
+    width: 3.5vw;
+    background-color: #0BA34E;
+    border-radius: 50%;
+    z-index: 5;
+}
+.svg-icon{
+    height:100%;
+    width: 0;
+    right: 0;
+    background-color: #000000;
+    position: absolute;
+    transition: width 0.6s;
+    border-radius: 50px;
+    /* transform: translate(100%); */
+    border: 2px solid black;
+    transition: all 0.7s ease;
+}
+.btn:hover .svg-icon{
+    width: 100%;
+    background-color: black;
+    /* transform: translate(0%); */
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    transition: all ease 9s;
+}
+.nav-menu:hover {
+    height: 25rem;
+}
+
+.list {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+.list:hover h5{
+    opacity:30%;
+}
+.list-item{
+    display: none;
+    margin-top: 0.5rem;
+    position: absolute;
+}
+nav:hover .list-item{
+    display: block;
+}
+.list-item p span{
+    width: 100%;
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.list-item p{
+    overflow: hidden;
+}
+.list-item p:hover{
+    opacity: 30%;
+}
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left:5% ;
+    padding-right: 5%;
+    margin-top: 150px;
+}
+#page1 h1{
+    font-size: 10vw;
+    text-transform: uppercase ;
+    font-weight: 900;
+    line-height: 9vw;
+}
+#page1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 7.5vh;
+    font-size: 1.2vw;
+}
+#page1 h1 svg{
+    height: 7vw;
+    width: 7vw;
+    background-color: #0BA34E;
+    border-radius: 50%;
+}
+#page1 h1 svg:hover{
+    rotate: -30deg;
+    transition: all ease 0.6s;
+    scale: 90%;
+}
+.btnText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.btnText h4{
+    font-weight: 400;
+    font-size: 1.2vw;
+    text-transform: lowercase;
+}
+#page1 #txt{
+    border: 0.5px solid white;
+    border-radius: 20px;
+    padding: 4px 8px;
+}
+.moving-div{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 60%;
+    height: 10vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: 100px;
+    white-space: nowrap;
+}
+
+.moving-img{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+    animation: slide 30s infinite linear;
+
+}
+.moving-img img{
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+}
+
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.moving-left{
+    height: 10vh;
+    width: 150px ;
+    background:linear-gradient(to left, transparent,rgb(0, 0, 0));
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+.moving-right{
+    height: 10vh;
+    width: 150px;
+    background:linear-gradient(to right, transparent,rgb(0, 0, 0));
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+#page2{
+    height: 100vh;
+    /* width: 100%; */
+    display: flex;
+    margin-left: 6%;
+    margin-right: 6%;
+    gap: 2%;
+    border-top: 1px solid rgb(70, 70, 70);
+    padding-bottom: 10vh;
+}
+.left{
+    /* background-color: slategrey; */
+    width: 50%;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.right{
+    /* background-color: slategray; */
+    width: 50%;
+}
+.para1 h2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.para2 h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.box{
+    height: 25%;
+    border-top: 1px solid rgb(70,70,70);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 12%;
+    /* background-color:steelblue; */
+}
+.box h1{
+    font-size: 22px;
+    font-weight:normal;
+    /* background-color: violet; */
+    width: 27vw;
+    z-index: 1;
+}
+.box p{
+    padding-left: 13%;
+    color: rgb(85, 85, 85);
+    font-size: 17px;
+    z-index: 1;
+}
+.box .logo-svg{
+    display: flex;
+    flex-direction: column;
+    /* background-color: tomato; */
+    width: 30px;
+    height: 15px;
+    position:relative;
+    overflow: hidden;
+    z-index: -2;
+}
+.box .logo-svg .svg1{
+    /* background-color: teal; */
+    width: 15px;
+    height: 100%;
+    margin-left: 50%;
+}
+.box .logo-svg .svg2{
+    /* background-color:steelblue; */
+    position: absolute;
+    top: 100%;
+    width: 15px;
+    height: 100%;
+    /* display: none; */
+}
+.box img{
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    scale: 0;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    /* background-color:black; */
+    background-image: url(https://lazarev.kiev.ua/la24/reel-cover.webp);
+    position: relative;
+    background-size: cover;
+}
